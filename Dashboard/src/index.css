@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dashboard-container {
+  padding: 1rem;
+  colour: #ffffff;
+}
+
+.forecast-card {
+  margin-top: 1rem;
+  color: #ffffff;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,11 +38,16 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url('/public/WeatherAppPic.jpg'); /* or .png, .webp, etc. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding-bottom: 60px;
 }
 
 button {
@@ -45,6 +60,7 @@ button {
   background-color: #ffff00;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-bottom: 60px;
 }
 button:hover {
   border-color: #646cff;
