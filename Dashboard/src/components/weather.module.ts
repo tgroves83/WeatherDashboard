@@ -6,17 +6,16 @@ height: 100vh;
 background: linear-gradient(to right, #c7c7eb, #ccf2dd);
     
     p{
-        margin: 10px 50px 10px 50px;
+        margin: 10px 10px 10px 0;
     }
     button{
-        margin-top: 20px;
         background-color: lightgrey;
     }
 
 .container {
     background-color: #ffffff7d;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,10 +41,10 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 .getButton {
     outline: none;
     border: 1px;
-    padding: 2px;
+    //padding: 2px;
     border-radius: 20px;
     text-align: center;
-    width: 80%;
+    width: 60%;
     background: transparent;
 }
     
@@ -53,10 +52,10 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 10px 30px 10px 30px;
+    margin: 10px 10px 10px 10px;
 
 > .icon {
-        font-size: 8rem;
+        font-size: 6rem;
 
 
         /* DO LATER NOT WHEN CREATING UI */
@@ -65,7 +64,7 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 
 > h1 {
         font-size: 3rem;
-        margin-top: 20px;
+        margin-top: 10px;
 
         font-family: "Bebas Neue", sans-serif;
     }
@@ -78,7 +77,7 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 
 
 > h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: "Inter", sans-serif;
         font-weight: 400;
     }
@@ -97,13 +96,13 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
         rgba(253, 255, 232, 1) 100%
 );
     border-radius: 12px;
-    padding: 10px;
+    padding: 5px;
 }
 .humidityLevel,
 .wind {
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    //margin: 0 10px;
 
 
 > .humidIcon {
@@ -113,7 +112,7 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 
 
 .windIcon {
-    font-size: 1.5rem;
+    font-size: 4rem;
     margin-right: 10px;
 }
 

@@ -38,7 +38,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('/public/WeatherAppPic.jpg'); /* or .png, .webp, etc. */
+  background-image: url('/public/coffee farm August 2021.jpg'); /* or .png, .webp, etc. */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,12 +47,12 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -60,7 +60,7 @@ button {
   background-color: #ffff00;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 button:hover {
   border-color: #646cff;

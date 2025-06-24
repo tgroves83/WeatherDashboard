@@ -36,7 +36,7 @@ function WeatherDashboard() {
                 <div className="getArea">
                        
                     <div className="getButton">
-                        <button onClick={handleClick}>Fetch Forecast</button>
+                        <button onClick={handleClick}>Fetch Current Weather</button>
                         {statusMessage && <p><strong>{statusMessage}</strong></p>}
                     </div>
                 </div>
