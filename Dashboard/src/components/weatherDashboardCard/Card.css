@@ -40,7 +40,8 @@
     margin: 10px 10px 10px 10px;
 
     > .icon {
-        font-size: 6rem;
+        font-size: 8rem;
+        margin-bottom: -20px;
     }
 }
 .bottomInfoArea {
@@ -95,10 +96,12 @@ button {
     background-color: #ffff00;
     cursor: pointer;
     transition: border-color 0.25s;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: -20px;
 }
 button:hover {
     border-color: #646cff;
+    background-color: #ffffff
 }
 button:focus,
 button:focus-visible {
@@ -110,4 +113,8 @@ h1 {
     font-size: 3.2em;
     line-height: 1.1;
     padding-bottom: 20px;
+}
+.icon{
+    font-size: 8rem;
+    margin-bottom: -20px;
 }

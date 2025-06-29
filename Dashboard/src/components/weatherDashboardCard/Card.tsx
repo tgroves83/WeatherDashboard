@@ -11,12 +11,12 @@ type CardProps = {
 const card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
     return (
         <div style={{
-            border: '1px solid #ddd',
+            border: '0px solid #ddd',
             borderRadius: '8px',
             padding: '16px',
             maxWidth: '300px',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            backgroundColor: 'white'
+            backgroundColor: 'transparent'
         }}>
             {imageUrl && (
                 <img
@@ -42,7 +42,7 @@ const card: React.FC<CardProps> = ({ title, description, imageUrl, children }) =
                 lineHeight: '1.5',
                 margin: '10px 10px 10px 0'
             }}>
-                //{description && <p className="card-description">{description}</p>}
+                {description && <p className="card-description">{description}</p>}
             </p>
             {children}
         </div>
