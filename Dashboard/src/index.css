@@ -13,16 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dashboard-container {
-  padding: 1rem;
-  color: #ffffff;
-}
-
-.forecast-card {
-  margin-top: 1rem;
-  color: #ffffff;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -38,47 +28,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('/coffeeFarmAugust2021.jpg');
+  background-image: url('./coffeeFarmAugust2021.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  padding-bottom: 20px;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #ffff00;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin-bottom: 10px;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

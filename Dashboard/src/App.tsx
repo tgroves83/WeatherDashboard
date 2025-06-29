@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import './App.css'
-import WeatherDashboard from "./components/WeatherDashboard.tsx";
+import WeatherDashboardCard from "./components/weatherDashboardCard/WeatherDashboardCard.tsx";
 import './index.css';
 
 function App() {
 
   return (
     <>
-        <div className="dashboard-container">
-            <WeatherDashboard />
+        <div>
+            <WeatherDashboardCard />
         </div>
     </>
   )

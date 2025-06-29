@@ -1,13 +1,14 @@
 import React from 'react';
+import './card.css';
 
 type CardProps = {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     imageUrl?: string;
     children: React.ReactNode;
 };
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
+const card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
     return (
         <div style={{
             border: '1px solid #ddd',
@@ -34,17 +35,18 @@ const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) =
                 fontSize: '1.5rem',
                 color: '#333'
             }}>
-                {title}
+                {title && <h2 className="card-title">{title}</h2>}
             </h2>
             <p style={{
                 color: '#666',
-                lineHeight: '1.5'
+                lineHeight: '1.5',
+                margin: '10px 10px 10px 0'
             }}>
-                {description}
+                //{description && <p className="card-description">{description}</p>}
             </p>
             {children}
         </div>
     );
 };
 
-export default Card;
+export default card;

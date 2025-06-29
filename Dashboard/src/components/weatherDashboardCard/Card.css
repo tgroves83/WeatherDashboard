@@ -1,17 +1,3 @@
-import styled from 'styled-components';
-
-export const MainWrapper = styled.div`
-
-height: 100vh;
-background: linear-gradient(to right, #c7c7eb, #ccf2dd);
-    
-    p{
-        margin: 10px 10px 10px 0;
-    }
-    button{
-        background-color: lightgrey;
-    }
-
 .container {
     background-color: #ffffff7d;
     border-radius: 12px;
@@ -41,49 +27,22 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 .getButton {
     outline: none;
     border: 1px;
-    //padding: 2px;
     border-radius: 20px;
     text-align: center;
     width: 60%;
     background: transparent;
 }
-    
+
 .weatherArea {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 10px 10px 10px 10px;
 
-> .icon {
+    > .icon {
         font-size: 6rem;
-
-
-        /* DO LATER NOT WHEN CREATING UI */
-    }
-
-
-> h1 {
-        font-size: 3rem;
-        margin-top: 10px;
-
-        font-family: "Bebas Neue", sans-serif;
-    }
-
-
-> span {
-        margin-bottom: 10px;
-        font-family: "Inter", sans-serif;
-    }
-
-
-> h2 {
-        font-size: 1.5rem;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
     }
 }
-
-
 .bottomInfoArea {
     display: flex;
     align-items: center;
@@ -91,10 +50,10 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
     font-family: "Josefin Sans", sans-serif;
     margin: 10px;
     background: linear-gradient(
-        90deg,
-        rgba(243, 255, 253, 1) 0%,
-        rgba(253, 255, 232, 1) 100%
-);
+            90deg,
+            rgba(243, 255, 253, 1) 0%,
+            rgba(253, 255, 232, 1) 100%
+    );
     border-radius: 12px;
     padding: 5px;
 }
@@ -102,10 +61,9 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
 .wind {
     display: flex;
     align-items: center;
-    //margin: 0 10px;
 
 
-> .humidIcon {
+    > .humidIcon {
         font-size: 1.5rem;
     }
 }
@@ -125,28 +83,31 @@ background: linear-gradient(to right, #c7c7eb, #ccf2dd);
     justify-content: center;
     align-items: center;
     z-index: 9999;
+}
 
-
-.loadingIcon {
-        font-size: 3rem;
-        /* DO LATER NOT WHEN CREATING UI */
-        animation: spin 2s linear infinite;
-    }
-    p {
-        font-size: 22px;
-        margin-top: 10px;
-        font-family: "Josefin Sans", sans-serif;
-    }
+button {
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #ffff00;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 10px;
+}
+button:hover {
+    border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 
-/* DO LATER NOT WHEN CREATING UI */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    padding-bottom: 20px;
 }
-`;

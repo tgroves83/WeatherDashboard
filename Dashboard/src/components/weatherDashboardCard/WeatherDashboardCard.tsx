@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { MainWrapper } from './weather.module.ts';
+import Card from './Card.tsx';
 import { WiHumidity } from "react-icons/wi";
 import { FiWind } from "react-icons/fi";
 import axios from "axios";
 import IconChanger from "./IconChanger.tsx";
-//import Card  from './Card.tsx';
 
 interface WeatherDataProps {
     main: {
@@ -17,9 +16,9 @@ interface WeatherDataProps {
     wind: {
         speed: number;
     }
-};
+}
 
-const WeatherDashboard: React.FC = () => {
+const WeatherDashboardCard: React.FC = () => {
     const [weatherData, setWeatherData] = useState<WeatherDataProps | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -43,7 +42,7 @@ const WeatherDashboard: React.FC = () => {
     };
 
     return (
-        <MainWrapper>
+        <Card>
             <div className="container">
                 <h1>Five Star Farm Weather</h1>
                 <div className="getArea">
@@ -92,10 +91,10 @@ const WeatherDashboard: React.FC = () => {
                         )}
                 </div>
             </div>
-        </MainWrapper>
+        </Card>
     );
 }
 
-export default WeatherDashboard;
+export default WeatherDashboardCard;
 
 
