@@ -26,7 +26,7 @@ const WeatherDashboardCard: React.FC = () => {
         setStatusMessage("Fetching most recent data...");
         setIsLoading(true);
         try {
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=9.313215&lon=-79.792150&appid=&units=metric`;
+            const url = `http://localhost:8000`;
             const response = await axios.get(url);
             setWeatherData(response.data);
             setStatusMessage(null);
