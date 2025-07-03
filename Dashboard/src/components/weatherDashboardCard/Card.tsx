@@ -1,5 +1,5 @@
 import React from 'react';
-import './card.css';
+import './Card.css';
 
 type CardProps = {
     title?: string;
@@ -8,7 +8,7 @@ type CardProps = {
     children: React.ReactNode;
 };
 
-const card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
+const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
     return (
         <div style={{
             border: '0px solid #ddd',
@@ -49,4 +49,4 @@ const card: React.FC<CardProps> = ({ title, description, imageUrl, children }) =
     );
 };
 
-export default card;
+export default Card;

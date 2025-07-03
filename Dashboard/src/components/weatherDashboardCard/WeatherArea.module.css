@@ -1,0 +1,54 @@
+.weatherArea {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+
+    > .icon {
+        font-size: 8rem;
+        margin-bottom: -20px;
+    }
+}
+
+.summaryArea {
+    margin-top: -15px;
+}
+
+.bottomInfoArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 10px;
+    background: linear-gradient(
+            90deg,
+            rgba(243, 255, 253, 1) 0%,
+            rgba(253, 255, 232, 1) 100%
+    );
+    border-radius: 12px;
+    padding: 5px;
+}
+.humidityLevel,
+.wind {
+    display: flex;
+    align-items: center;
+
+
+    > .humidIcon {
+        font-size: 1.5rem;
+    }
+}
+
+
+.windIcon {
+    font-size: 4rem;
+    margin-right: 10px;
+}
+ h3 {
+     font-size: 1.3rem;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 1.5rem;
+     letter-spacing: 0em;
+     text-align: center;
+ }
