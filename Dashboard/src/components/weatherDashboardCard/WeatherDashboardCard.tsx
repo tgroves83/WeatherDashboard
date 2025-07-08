@@ -39,10 +39,9 @@ const WeatherDashboardCard: React.FC = () => {
     };
 
     return (
-        <Card>
+        <Card title={"Five Star Farm Weather"}>
             <>
-            <div className="container">
-                <h1>Five Star Farm Weather</h1>
+            <div>
                 <div className="getArea">
                        
                     <div className="getButton">

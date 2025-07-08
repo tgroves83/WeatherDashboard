@@ -29,13 +29,13 @@ app.get('/', async (req, res) => {
             res.json(response.data);
         } else {
             throw new Error('API key not found in environment variables');
-        } // Send just the data, not the entire response object
+        }
     } catch (error) {
-        console.error('Error:', error.message);
-        res.status(500).json({
-            error: 'Failed to fetch weather data',
-            message: error.message
-        });
+            console.error('Error:', error.message);
+            res.status(500).json({
+                error: 'Failed to fetch weather data',
+                message: error.message
+            });
     }
 });
 

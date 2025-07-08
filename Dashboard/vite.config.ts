@@ -4,6 +4,4 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  envDir: '.env.development.local',  // Specify the directory where your .env files are located
-
 })

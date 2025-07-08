@@ -16,6 +16,13 @@
     height: 100vh;
 }
 
+.header {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 
 .getArea {
     display: flex;

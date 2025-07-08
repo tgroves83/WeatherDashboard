@@ -10,13 +10,14 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
     return (
-        <div style={{
+        <div className={'chicken'} 
+            style={{
             border: '0px solid #ddd',
             borderRadius: '8px',
             padding: '16px',
             maxWidth: '300px',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            backgroundColor: 'transparent'
+            backgroundColor: 'white'
         }}>
             {imageUrl && (
                 <img
@@ -35,7 +36,7 @@ const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) =
                 fontSize: '1.5rem',
                 color: '#333'
             }}>
-                {title && <h2 className="card-title">{title}</h2>}
+                {title && <h2 className="header">{title}</h2>}
             </h2>
             <p style={{
                 color: '#666',
