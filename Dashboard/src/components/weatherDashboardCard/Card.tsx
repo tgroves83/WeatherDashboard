@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import styles from './Card.module.css';
 
 type CardProps = {
     title?: string;
@@ -10,41 +10,16 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ title, description, imageUrl, children }) => {
     return (
-        <div className={'chicken'} 
-            style={{
-            border: '0px solid #ddd',
-            borderRadius: '8px',
-            padding: '16px',
-            maxWidth: '300px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            backgroundColor: 'white'
-        }}>
+        <div className={styles.card}>
             {imageUrl && (
                 <img
                     src={imageUrl}
                     alt={title}
-                    style={{
-                        width: '100%',
-                        height: '200px',
-                        objectFit: 'cover',
-                        borderRadius: '4px'
-                    }}
+                    className={styles.image}
                 />
             )}
-            <h2 style={{
-                marginTop: '12px',
-                fontSize: '1.5rem',
-                color: '#333'
-            }}>
-                {title && <h2 className="header">{title}</h2>}
-            </h2>
-            <p style={{
-                color: '#666',
-                lineHeight: '1.5',
-                margin: '10px 10px 10px 0'
-            }}>
-                {description && <p className="card-description">{description}</p>}
-            </p>
+            {title && <h1 className={styles.title}>{title}</h1>}
+            {description && <p className={styles.description}>{description}</p>}
             {children}
         </div>
     );

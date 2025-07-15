@@ -5,12 +5,9 @@ import {
     BsFillCloudRainFill, 
     BsCloudFogFill } from "react-icons/bs";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-
-
 interface IconChangerProps {
     weather: string;
 }
-
 export default function IconChanger({weather}:IconChangerProps) {
     let iconElement: React.ReactNode;
     let iconColour: string;

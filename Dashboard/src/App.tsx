@@ -1,13 +1,12 @@
 import WeatherDashboardCard from "./components/weatherDashboardCard/WeatherDashboardCard.tsx";
 import './index.css';
-import Card from "./components/weatherDashboardCard/Card";
+import styles from './App.module.css';
 
 function App() {
 
   return (
     <>
-        <div className={'zebra'}>
-            <Card title={'CardCreatedWColin'} children={undefined}/>
+        <div className={styles.container}>
             <WeatherDashboardCard />
         </div>
     </>

@@ -27,7 +27,23 @@ const WeatherDashboardCard: React.FC = () => {
         setIsLoading(true);
         try {
             const url = `http://localhost:8000`;
+            console.log('Making request to:', url);
+            
             const response = await axios.get(url);
+            console.log('Response received:', response);
+            console.log('Weather data:', response.data);
+
+            if (!response.data) {
+                throw new Error('No data received from server');
+            }
+
+            // Validate the received data structure
+            if (!response.data.main || !response.data.weather || !response.data.wind) {
+                throw new Error('Invalid data structure received');
+            }
+
+
+
             setWeatherData(response.data);
             setStatusMessage(null);
         } catch (error) {
@@ -37,6 +53,11 @@ const WeatherDashboardCard: React.FC = () => {
             setIsLoading(false);
         }
     };
+
+    // Add debug output
+    console.log('Current weatherData state:', weatherData);
+    console.log('Current isLoading state:', isLoading);
+
 
     return (
         <Card title={"Five Star Farm Weather"}>

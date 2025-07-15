@@ -23,22 +23,22 @@ const WeatherArea: React.FC<WeatherDisplayProps> = ({
         </div>
 
         <div className={styles.summaryArea}>
-            <h3><strong>Temperature:</strong> {temp}°C</h3>
+            <h3><strong>Temperature:</strong> {Math.round(temp)}°C</h3>
             <h3><strong>Summary:</strong> {summary}</h3>
         </div>
 
         <div className={styles.bottomInfoArea}>
             <div className={styles.humidityLevel}>
-                <WiHumidity className={styles.windIcon} />
+                <WiHumidity className={styles.windIcon}/>
                 <div className={styles.humidIcon}>
-                    <h2>{humidity}%</h2>
+                    <h2>{Math.round(humidity)}%</h2>
                     <p>Humidity</p>
                 </div>
             </div>
             <div className={styles.wind}>
-                <FiWind className={styles.windIcon} />
+                <FiWind className={styles.windIcon}/>
                 <div className={styles.humidIcon}>
-                    <h2>{windSpeed} km/h</h2>
+                    <h2>{Math.round(windSpeed)} km/h</h2>
                     <p>Wind Speed</p>
                 </div>
             </div>
