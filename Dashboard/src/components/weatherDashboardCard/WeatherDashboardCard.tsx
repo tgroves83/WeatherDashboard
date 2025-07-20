@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Card from './Card.tsx';
-import axios from "axios";
+//import axios from "axios";
 import WeatherArea from "./WeatherArea.tsx";
+import { fetchCurrentWeather } from "@myorg/service-client";
+import type { WeatherData } from "@myorg/service-client";
 
 
 interface WeatherDataProps {
@@ -25,26 +27,38 @@ const WeatherDashboardCard: React.FC = () => {
     const handleClick = async () => {
         setStatusMessage("Fetching most recent data...");
         setIsLoading(true);
-        try {
-            const url = `http://localhost:8000`;
-            console.log('Making request to:', url);
-            
-            const response = await axios.get(url);
-            console.log('Response received:', response);
-            console.log('Weather data:', response.data);
 
-            if (!response.data) {
+        //1. Create a Service Client / Wrapper for FarmWeatherSys.Api (new project)
+        //      - "Create a React Service Client for my REST API"
+        //      - "GET http://localhost:5019/weatherforecast/GetWeatherForecast"
+        //      - This should return JSON data, which is transformed into a React object through the Service Client.
+        //2. Implement API methods as async calls (returning promises)
+        //3. Use promise or promise chain to get data from Service Client.
+
+        /*serviceClient.GetWeatherDataAsync()
+            .promise
+                .then(...)
+                .catch(error ...)
+                .finally(...)
+*/      
+        try {
+            //const url = `http://localhost:8000`;
+            //console.log('Making request to:', url);
+            
+            //const response = await axios.get(url);
+            const data = await fetchCurrentWeather();
+            //console.log('Response received:', response);
+            console.log('Weather data:', data);
+
+            /*if (!response.data) {
                 throw new Error('No data received from server');
             }
 
             // Validate the received data structure
             if (!response.data.main || !response.data.weather || !response.data.wind) {
                 throw new Error('Invalid data structure received');
-            }
-
-
-
-            setWeatherData(response.data);
+            }*/
+            setWeatherData(data);
             setStatusMessage(null);
         } catch (error) {
             console.error('Error fetching weather data:', error);
