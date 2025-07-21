@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card.tsx';
-//import axios from "axios";
+import axios from "axios";
 import WeatherArea from "./WeatherArea.tsx";
 import { fetchCurrentWeather } from "@myorg/service-client";
 import type { WeatherData } from "@myorg/service-client";
@@ -27,6 +27,24 @@ const WeatherDashboardCard: React.FC = () => {
     const handleClick = async () => {
         setStatusMessage("Fetching most recent data...");
         setIsLoading(true);
+        
+        try {
+            const data = await fetchCurrentWeather();
+            
+            console.log('Weather data:', data);
+            setWeatherData(data);
+            setStatusMessage(null);
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
+            setStatusMessage("Error fetching weather data");
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleClick2 = async () => {
+        setStatusMessage("Fetching most recent data...");
+        setIsLoading(true);
 
         //1. Create a Service Client / Wrapper for FarmWeatherSys.Api (new project)
         //      - "Create a React Service Client for my REST API"
@@ -40,25 +58,24 @@ const WeatherDashboardCard: React.FC = () => {
                 .then(...)
                 .catch(error ...)
                 .finally(...)
-*/      
+*/
         try {
-            //const url = `http://localhost:8000`;
-            //console.log('Making request to:', url);
-            
-            //const response = await axios.get(url);
-            const data = await fetchCurrentWeather();
-            //console.log('Response received:', response);
-            console.log('Weather data:', data);
+            const url = `http://localhost:8000`;
+            console.log('Making request to:', url);
 
-            /*if (!response.data) {
+            const response = await axios.get(url);
+            console.log('Response received:', response);
+            console.log('Weather data:', response.data);
+
+            if (!response.data) {
                 throw new Error('No data received from server');
             }
 
             // Validate the received data structure
             if (!response.data.main || !response.data.weather || !response.data.wind) {
                 throw new Error('Invalid data structure received');
-            }*/
-            setWeatherData(data);
+            }
+            setWeatherData(response.data);
             setStatusMessage(null);
         } catch (error) {
             console.error('Error fetching weather data:', error);
@@ -81,7 +98,10 @@ const WeatherDashboardCard: React.FC = () => {
                        
                     <div className="getButton">
                         <button onClick={handleClick} disabled={isLoading}>
-                            {isLoading ? 'Fetching...' : 'Fetch Current Weather'}
+                            {isLoading ? 'Fetching...' : 'Fetch Farm Weather'}
+                        </button>
+                        <button onClick={handleClick2} disabled={isLoading}>
+                            {isLoading ? 'Fetching...' : 'Fetch Colon Weather'}
                         </button>
                         {statusMessage && <p><strong>{statusMessage}</strong></p>}
                     </div>

@@ -19,32 +19,6 @@
     text-align: center;
 }
 
-.header {
-    font-size: 24px;
-    font-weight: 500;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.getArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.getButton {
-    outline: none;
-    border-radius: 20px;
-    text-align: center;
-    width: 60%;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
 button {
     border-radius: 8px;
     border: 1px solid;
@@ -56,6 +30,8 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
     margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 button:hover {
