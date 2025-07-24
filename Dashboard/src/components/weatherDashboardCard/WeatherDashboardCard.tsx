@@ -31,13 +31,13 @@ const WeatherDashboardCard: React.FC = () => {
         
         await client.fetchCurrentWeather()
             .then((data: WeatherData) => {
-                console.log('Weather data:', data);
+                console.log('Farm Weather data:', data);
                 setWeatherData(data);
                 setStatusMessage(null);
             })
             .catch((error: any) => {
-                console.error('Error fetching weather data:', error);
-                setStatusMessage("Error fetching weather data");
+                console.error('Error fetching farm weather data:', error);
+                setStatusMessage("Error fetching farm weather data");
             })
             .finally(() => {
                 setIsLoading(false);
@@ -47,19 +47,22 @@ const WeatherDashboardCard: React.FC = () => {
     const fetchColonWeather = async () => {
         setStatusMessage("Fetching weather tower's most recent data...");
         setIsLoading(true);
-        
-        try {
-            const data: OpenWeatherData = await fetchOpenWeather();
-            console.log('Weather data:', data);
-            
-            setWeatherData(data);
-            setStatusMessage(null);
-        } catch (error) {
-            console.error('Error fetching weather data:', error);
-            setStatusMessage("Error fetching weather data");
-        } finally {
-            setIsLoading(false);
-        }
+
+        const client = serviceClient();
+
+        await client.fetchOpenWeather()
+            .then((data: WeatherData) => {
+                console.log('Tower Weather data:', data);
+                setWeatherData(data);
+                setStatusMessage(null);
+            })
+            .catch((error: any) => {
+                console.error('Error fetching tower weather data:', error);
+                setStatusMessage("Error fetching tower weather data");
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
     };
 
     // Add debug output
