@@ -5,7 +5,15 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "types": ["vite/client"],
-    "noImplicitAny":false
+    "types": [
+      "vite/client"
+    ],
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@myorg/service-client": [
+        "../ServiceClient/dist"
+      ]
+    }
   }
 }
